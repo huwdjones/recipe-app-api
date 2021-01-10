@@ -6,7 +6,7 @@ ENV PYTHONUNBUFFERED 1
 # Install dependencies
 COPY ./requirements.txt /requirements.txt
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt --use-feature-resolver=2020-resolver
 
 # Setup directory structure
 RUN mkdir /app
